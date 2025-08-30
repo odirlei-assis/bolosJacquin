@@ -1,0 +1,115 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --corBackground: #FFF6E8;
+    --corPrincipal: #FFD188;
+    --corFontClara: #FFFFFF;
+    --corFontEscura: #000000;
+    --alturaRodape: 60px;
+    --fontLogo: "Julius Sans One", sans-serif;
+    --fontComplementar: "Bellota", system-ui;
+}
+
+body {
+    width: 100vw;
+    height: 100vh;
+    background-color: var(--corBackground);
+    font-family: var(--fontComplementar);
+}
+
+
+
+
+/* MAIN - SECAO LOGO*/
+.main_home {
+    width: 90%;
+    max-width: 1440px;
+    margin: 0 auto;
+    height: calc(100% - var(--alturaRodape));
+    display: flex;
+}
+
+.main_home .secao_logo {
+    background-color: aqua;
+    width: 25%;
+    display: flex;
+    flex-direction: column;
+}
+
+.main_home .secao_logo .titulo {
+    font-family: var(--fontLogo);
+    font-size: 64px;
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+    margin-top: 25%;
+}
+
+.main_home .secao_logo .titulo span {
+    font-size: 44px;
+}
+
+.main_home .secao_logo img {
+    max-width: 250px;
+    margin-top: auto;
+    align-self: center;
+}
+
+
+
+
+
+/* MAIN - SECAO CARDS */
+.main_home .secao_cards {
+    background-color: peru;
+    width: 75%;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.main_home .card {
+    width: 300px;
+    height: 400px;
+    background-color: lightgreen;
+    border-radius: 30px;
+    margin: auto;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+
+    text-decoration: none;
+    box-shadow: 0px 0px 40px 2px rgba(0, 0, 0, 0.4);
+}
+
+.main_home .card svg {
+    fill: var(--corFontClara);
+    height: 180px;
+}
+
+.main_home .card span {
+    color: var(--corFontClara);
+    font-size: 40px;
+}
+
+
+
+
+
+
+/* RODAPE */
+footer {
+    width: 100%;
+    height: var(--alturaRodape);
+    background-color: var(--corPrincipal);
+    font-family: var(--fontLogo);
+    font-size: 14px;
+
+    line-height: var(--alturaRodape);
+    text-align: center;
+}
