@@ -2,7 +2,30 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: var(--fontComplementar);
 }
+
+.acessivel {
+    position: absolute;
+    /* Remove do fluxo do layout */
+    width: 1px;
+    /* Largura mínima */
+    height: 1px;
+    /* Altura mínima */
+    padding: 0;
+    /* Sem preenchimento */
+    margin: -1px;
+    /* Para não ocupar espaço visível */
+    overflow: hidden;
+    /* Oculta qualquer conteúdo extra */
+    clip-path: inset(50%);
+    /* Recorta todo o conteúdo */
+    white-space: nowrap;
+    /* Evita quebras de linha */
+    border: 0;
+    /* Sem borda */
+}
+
 
 :root {
     --corBackground: #FFF6E8;
@@ -15,24 +38,38 @@
 }
 
 body {
-    width: 100vw;
-    height: 100vh;
     background-color: var(--corBackground);
-    font-family: var(--fontComplementar);
 }
+
+.container {
+    width: 90%;
+    max-width: 1440px;
+    margin: 0 auto;
+
+}
+
+
+
+
+
+/* HOME */
+.body_home {
+    width: 100%;
+    height: 100vh;
+}
+
+.main_home {
+    /* height: calc(((100vw/19)*9) - var(--alturaRodape)); */
+    height: calc(100vh - var(--alturaRodape));
+    display: flex;
+    background-color: aqua;
+}
+
 
 
 
 
 /* MAIN - SECAO LOGO*/
-.main_home {
-    width: 90%;
-    max-width: 1440px;
-    margin: 0 auto;
-    height: calc(100% - var(--alturaRodape));
-    display: flex;
-}
-
 .main_home .secao_logo {
     background-color: aqua;
     width: 25%;
@@ -72,11 +109,12 @@ body {
 }
 
 .main_home .card {
-    width: 300px;
-    height: 400px;
+    width: 280px;
+    height: 380px;
     background-color: lightgreen;
     border-radius: 30px;
     margin: auto;
+
 
     display: flex;
     flex-direction: column;
@@ -84,7 +122,7 @@ body {
     align-items: center;
 
     text-decoration: none;
-    box-shadow: 0px 0px 40px 2px rgba(0, 0, 0, 0.4);
+    box-shadow: 0px 0px 40px 2px #00000060;
 }
 
 .main_home .card svg {
@@ -108,8 +146,118 @@ footer {
     height: var(--alturaRodape);
     background-color: var(--corPrincipal);
     font-family: var(--fontLogo);
-    font-size: 14px;
+    font-size: 16px;
 
     line-height: var(--alturaRodape);
     text-align: center;
+}
+
+
+
+
+
+/* PRODUTOS */
+header {
+    background-color: var(--corPrincipal);
+}
+
+.container_header {
+    height: 80px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header .icone_home {
+    height: 50px;
+}
+
+header .logo_header {
+    height: 50px;
+}
+
+
+
+
+
+/* BANNER */
+.banner {
+    background-image: url(./assets/imgs/Banner.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 100%;
+    aspect-ratio: 3.2;
+}
+
+
+
+
+
+/* CARDS */
+.titulo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 100px 0;
+}
+
+.titulo span {
+    font-size: 48px;
+}
+
+.titulo hr {
+    background-color: var(--corPrincipal);
+    width: 300px;
+    height: 4px;
+    border: none;
+    border-radius: 2px;
+}
+
+.cards {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10%;
+    justify-content: center;
+}
+
+.card {
+    width: 350px;
+    height: 500px;
+    background-color: var(--corFontClara);
+    box-shadow: 0 4px 4px 2px #00000025;
+    border-radius: 30px;
+    text-align: center;
+    margin-bottom: 100px;
+}
+
+.card img {
+    width: 100%;
+}
+
+.card h2 {
+    margin: 20px 0;
+    font-size: 28px;
+}
+
+.card p {
+    padding: 0 10px;
+    font-size: 18px;
+}
+
+@media screen and (max-width: 900px) {
+    .container {
+        width: 95%;
+    }
+
+    .cards {
+        gap: 4%;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .banner {
+        background-size: cover;
+        background-position: -50px;
+        aspect-ratio: 1.8;
+    }
 }
