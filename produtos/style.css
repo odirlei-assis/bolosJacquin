@@ -12,10 +12,6 @@
     /* Largura mínima */
     height: 1px;
     /* Altura mínima */
-    padding: 0;
-    /* Sem preenchimento */
-    margin: -1px;
-    /* Para não ocupar espaço visível */
     overflow: hidden;
     /* Oculta qualquer conteúdo extra */
     clip-path: inset(50%);
@@ -25,7 +21,6 @@
     border: 0;
     /* Sem borda */
 }
-
 
 :root {
     --corBackground: #FFF6E8;
@@ -51,111 +46,7 @@ body {
 
 
 
-/* HOME */
-.body_home {
-    width: 100%;
-    height: 100vh;
-}
-
-.main_home {
-    /* height: calc(((100vw/19)*9) - var(--alturaRodape)); */
-    height: calc(100vh - var(--alturaRodape));
-    display: flex;
-    background-color: aqua;
-}
-
-
-
-
-
-/* MAIN - SECAO LOGO*/
-.main_home .secao_logo {
-    background-color: aqua;
-    width: 25%;
-    display: flex;
-    flex-direction: column;
-}
-
-.main_home .secao_logo .titulo {
-    font-family: var(--fontLogo);
-    font-size: 64px;
-    display: flex;
-    flex-direction: column;
-    align-items: end;
-    margin-top: 25%;
-}
-
-.main_home .secao_logo .titulo span {
-    font-size: 44px;
-}
-
-.main_home .secao_logo img {
-    max-width: 250px;
-    margin-top: auto;
-    align-self: center;
-}
-
-
-
-
-
-/* MAIN - SECAO CARDS */
-.main_home .secao_cards {
-    background-color: peru;
-    width: 75%;
-    display: flex;
-    flex-wrap: wrap;
-}
-
-.main_home .card {
-    width: 280px;
-    height: 380px;
-    background-color: lightgreen;
-    border-radius: 30px;
-    margin: auto;
-
-
-    display: flex;
-    flex-direction: column;
-    justify-content: space-evenly;
-    align-items: center;
-
-    text-decoration: none;
-    box-shadow: 0px 0px 40px 2px #00000060;
-}
-
-.main_home .card svg {
-    fill: var(--corFontClara);
-    height: 180px;
-}
-
-.main_home .card span {
-    color: var(--corFontClara);
-    font-size: 40px;
-}
-
-
-
-
-
-
-/* RODAPE */
-footer {
-    width: 100%;
-    height: var(--alturaRodape);
-    background-color: var(--corPrincipal);
-    font-family: var(--fontLogo);
-    font-size: 16px;
-
-    line-height: var(--alturaRodape);
-    text-align: center;
-}
-
-
-
-
-
-/* PRODUTOS */
+/* HEADER */
 header {
     background-color: var(--corPrincipal);
 }
@@ -244,6 +135,51 @@ header .logo_header {
     font-size: 18px;
 }
 
+
+
+
+
+/* WHATSAPP */
+.whatsapp {
+    position: fixed;
+    right: 30px;
+    bottom: 30px;
+    transition: transform 0.5s ease-in-out, 
+                filter 0.5s ease-in-out;
+}
+
+.whatsapp img {
+    width: 80px;
+    filter: drop-shadow(0 5px 1px #00000025);
+}
+
+.whatsapp:hover {
+    transform: scale(1.1);
+    filter: drop-shadow(0 7px 2px #00000025);
+}
+
+
+
+
+
+
+/* RODAPE */
+footer {
+    width: 100%;
+    height: var(--alturaRodape);
+    background-color: var(--corPrincipal);
+    font-family: var(--fontLogo);
+    font-size: 16px;
+
+    line-height: var(--alturaRodape);
+    text-align: center;
+}
+
+
+
+
+
+/* MEDIA */
 @media screen and (max-width: 900px) {
     .container {
         width: 95%;

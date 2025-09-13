@@ -16,12 +16,18 @@
 }
 
 .visualmente_oculto {
-    position: absolute;/* Retira o elemento do fluxo visual sem afetar leitores de tela */
-    width: 1px;/* Define largura mínima para ocupar quase nada */
-    height: 1px;/* Define altura mínima */
-    overflow: hidden;/* Garante que nada ultrapasse o limite definido */
-    clip-path: inset(50%);/* Recorta o conteúdo, tornando-o invisível */
-    white-space: nowrap;/* Evita quebras de linha inesperadas */
+    position: absolute;
+    /* Retira o elemento do fluxo visual sem afetar leitores de tela */
+    width: 1px;
+    /* Define largura mínima para ocupar quase nada */
+    height: 1px;
+    /* Define altura mínima */
+    overflow: hidden;
+    /* Garante que nada ultrapasse o limite definido */
+    clip-path: inset(50%);
+    /* Recorta o conteúdo, tornando-o invisível */
+    white-space: nowrap;
+    /* Evita quebras de linha inesperadas */
 }
 
 .container {
@@ -79,42 +85,42 @@ header input {
 
 
 
-/* MAIN CADASTRO/LISTAGEM */
-.main_cadastro{
+/* MAIN CADASTRO */
+.main_cadastro {
     background-color: var(--corBackground);
     font-family: var(--fontComplementar);
-    padding-top: 100px;
+    padding: 100px 0;
 }
 
-.main_cadastro form{
+.main_cadastro form {
     padding-bottom: 100px;
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
-.main_cadastro .container_cadastro{
+.main_cadastro .container_cadastro {
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
     /* background-color: aquamarine; */
 }
 
-.main_cadastro h2{
+.main_cadastro h2 {
     text-align: center;
     font-size: 56px;
-    
+
     /* border-bottom: solid 2px var(--corPrincipal);
     width: 300px;
     margin: auto; */
 }
 
-.main_cadastro hr{
+.main_cadastro hr {
     width: 300px;
     height: 2px;
     background-color: var(--corPrincipal);
     margin: auto;
-    margin-bottom: 100px;
+    margin-bottom: 50px;
 }
 
 /* .campo{
@@ -122,29 +128,29 @@ header input {
     flex-direction: column;
 } */
 
-.main_cadastro .cadastro_col1{
+.main_cadastro .cadastro_col1 {
     /* background-color: lightpink; */
     width: 45%;
     min-width: 330px;
 }
 
-.main_cadastro .cadastro_col2{
+.main_cadastro .cadastro_col2 {
     /* background-color: lightskyblue; */
     width: 45%;
     min-width: 330px;
 }
 
-.container_cadastro input{
+.container_cadastro input {
     height: 36px;
     margin-bottom: 20px;
 }
 
-.container_cadastro label{
-    font-size: 24px;
+.container_cadastro label {
+    font-size: 20px;
 }
 
 .linha_cat_img,
-.linha_val_peso{
+.linha_val_peso {
     display: flex;
     justify-content: space-between;
 }
@@ -154,27 +160,55 @@ header input {
 .campo_img,
 .campo_valor,
 .campo_peso,
-.cadastro_col2{
+.cadastro_col2 {
     display: flex;
     flex-direction: column;
 }
 
-.campo_categoria{
-    width: 75%;
+.campo_categoria {
+    width: 70%;
 }
 
 .campo_peso,
-.campo_valor{
-    width: 45%;
+.campo_valor {
+    width: 47%;
 }
 
-.cadastro_col2 textarea{
+.campo_img {
+    width: 24%;
+    /* background-color: aqua; */
+}
+
+.campo_img input {
+    display: none;
+}
+
+.campo_img label {
+    cursor: pointer;
+    width: 100%;
+    /* background-color: aquamarine; */
+}
+
+.campo_img label div {
+    background-color: #ffffff;
+    text-align: center;
+    height: 36px;
+    border-radius: 10px;
+    padding: 6px;
+    border: solid 1px #cccccc;
+}
+
+.campo_img label svg {
+    width: 22px;
+}
+
+.cadastro_col2 textarea {
     resize: none;
     height: 200px;
 }
 
 .container_cadastro input,
-.cadastro_col2 textarea{
+.cadastro_col2 textarea {
     border-radius: 10px;
     padding: 5px;
     font-size: 18px;
@@ -190,6 +224,39 @@ header input {
     font-size: 24px;
     font-family: var(--fontComplementar);
     box-shadow: 0 4px 4px 0 #00000025;
+}
+
+
+
+
+
+/* LISTA */
+.container_lista {}
+
+table {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: center;
+    border-collapse: collapse;
+}
+
+table th,
+table td {
+    padding: 20px 5px 3px 5px;
+}
+
+table th {
+    border-bottom: solid 2px #FFD188;
+    font-size: 20px;
+}
+
+table td {
+    border-bottom: solid 2px #CCCCCC50;
+}
+
+table svg {
+    width: 30px;
 }
 
 
@@ -213,14 +280,62 @@ footer {
 
 
 /* MEDIA */
+@media screen and (max-width: 768px) {}
+
 @media screen and (max-width: 768px) {
-    .main_cadastro .container_cadastro{
+    .main_cadastro .container_cadastro {
         flex-direction: column;
         align-items: center;
     }
 
     .main_cadastro .cadastro_col1,
-    .main_cadastro .cadastro_col2{
-        width: 80%;
+    .main_cadastro .cadastro_col2 {
+        width: 90%;
     }
+
+    /* TABELA */
+    table {
+        text-align: left;
+    }
+
+    thead {
+        display: none;
+    }
+
+    tr {
+        display: flex;
+        flex-direction: column;
+        background-color: #FFFFFF;
+        align-items: flex-start;
+        border: solid 2px #FFD188;
+        border-radius: 10px;
+        padding: 0 10px;
+        margin-bottom: 30px;
+        box-shadow: 0 4px 4px 0 #00000025;
+    }
+
+    table td {
+        border-bottom: none;
+        padding-top: 10px;
+    }
+
+    td:not(:last-child)::before {
+        content: attr(data-cell) ": ";
+        font-weight: 600;
+        border-bottom: solid 2px #CCCCCC50;
+    }
+
+    td:last-child {
+        align-self: flex-end;
+        padding: 0;
+    }
+}
+
+@media screen and (max-width: 500px) {
+
+    .main_cadastro .cadastro_col1,
+    .main_cadastro .cadastro_col2 {
+        width: 100%;
+    }
+
 }
