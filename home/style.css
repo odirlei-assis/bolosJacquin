@@ -55,6 +55,7 @@ body {
 .body_home {
     width: 100%;
     height: 100vh;
+    background-color: aquamarine;
 }
 
 .main_home {
@@ -105,11 +106,14 @@ body {
     width: 75%;
     display: flex;
     flex-wrap: wrap;
+    gap: 10%;
+    align-self: center;
+    height: 90%;
 }
 
 .main_home .card {
-    width: 280px;
-    height: 380px;
+    width: 22%;
+    height: 45%;
     background-color: lightgreen;
     border-radius: 30px;
     margin: auto;
