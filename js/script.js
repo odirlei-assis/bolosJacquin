@@ -1,17 +1,29 @@
-let menu = document.getElementById("box_busca"); // Obtém o elemento do menu pelo ID
-let sombra = document.getElementById("sombra"); // Obtém o elemento da sombra pelo ID
+const busca = document.getElementById("box_busca"); // Obtém o elemento do menu pelo ID
+const sombra = document.getElementById("sombra"); // Obtém o elemento da sombra pelo ID
 
 function mostrarMenu() {
     // console.log("mostrando menu");
-
-    if (window.getComputedStyle(menu).right != "10px") {
-        //menu.style.right = "10px"; // Define a posição 'left' do menu como 10px movendo ele para direita
-        sombra.style.top = "-10vw"; // Move a sombra para a esquerda
+    if (window.getComputedStyle(sombra).top != "-210px") {
+        sombra.style.top = "-210px";
     
     }else{
-        //menu.style.right = "-480px"; // Esconde o menu deslocando-o para esquerda
-        sombra.style.left = "110vw"; // Move a sombra para a direita para ocultá-la
+        sombra.style.top = "0";
     }
 
-    menu.classList.toggle("box_busca_ativo");
+    busca.classList.toggle("box_busca_ativo");
 }
+
+// Define uma função nomeada para lidar com o redimensionamento
+function ocultaMenuResponsivo() {
+    // Se a largura da janela for maior que 768 pixels
+    if (window.innerWidth > 768) {
+        // Esconde a sombra
+        sombra.style.top = "-210px";
+
+        // Fecha a caixa de busca (caso esteja aberta)
+        busca.classList.remove("box_busca_ativo");
+    }
+}
+
+// Adiciona o ouvinte de evento, usando a função nomeada
+window.addEventListener("resize", ocultaMenuResponsivo);

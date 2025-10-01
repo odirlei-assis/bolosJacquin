@@ -38,13 +38,14 @@ body {
 
 #sombra {
     position: fixed;
-    top: 0px;
+    top: -210px;
     background-color: #FFD18865;
+    /* transform: translateX(100%); */
 
     width: 130vw;
     height: 200px;
     z-index: 1;
-    overflow: hidden;
+    overflow-y: hidden;
     transition: .5s;
     backdrop-filter: blur(10px);
 }
@@ -85,11 +86,6 @@ header {
     width: 60%;
     max-width: 500px;
     margin: 0 10px;
-
-    /* -moz-transition: all 0.5s ease;
-        -webkit-transition: all 0.5s ease;
-        -o-transition: all 0.5s ease; */
-    transition: all 0.5s ease;
 }
 
 .icone_lupa {
@@ -258,25 +254,37 @@ footer {
         cursor: pointer;
     }
 
-    .box_busca {
-        right: -480px;
-        position: absolute;
-    }
-
     .icone_home {
         display: none;
     }
 
-    .box_busca_ativo {
+    .box_busca {
         position: absolute;
+        top: -110px;
+        overflow-y: hidden;
         right: 10px;
-        overflow-x: hidden;
-        top: 70px;
+
         border: 1px solid rgba(255, 255, 255, 0.8);
         backdrop-filter: blur(10px);
         box-shadow: 15px 15px 30px rgba(0, 0, 0, 0.5);
         z-index: 1;
         border-radius: 10px;
         padding: 10px;
+        width: 90%;
+        
+        /* -moz-transition: all 0.5s ease;
+        -webkit-transition: all 0.5s ease;
+        -o-transition: all 0.5s ease; */
+        transition: all 0.5s ease;
+    }
+
+    .box_busca_ativo {
+        top: 100px;
+
+    }
+
+    .icone_lupa {
+        left: 19px;
+        top: 19px;
     }
 }
